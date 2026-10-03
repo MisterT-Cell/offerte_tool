@@ -2,7 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "mistert-cell/offerte-tool",
     "type": "project",
-    "description": "een offerte aanvraag tool voor bouwvakkers: klanten sturen een klus met foto's en een beschrijving van de klus en de vakman beheert ze in een dashboard.",
+    "description": "Een offerte-aanvraagtool voor bouwvakkers: klanten sturen een klus met foto's en een beschrijving van de klus en de vakman beheert ze in een dashboard.",
     "keywords": [
         "laravel",
         "framework"
