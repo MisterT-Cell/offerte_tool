@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email');
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
+            $table->string('postal_code', 10)->nullable();
+            $table->string('city')->nullable();
             $table->text('description');
             $table->string('status')->default('new')->index();
             $table->timestamps();

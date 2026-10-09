@@ -21,6 +21,10 @@ class QuoteRequestFactory extends Factory
             'name' => fake()->name(),
             'email' => fake()->safeEmail(),
             'description' => fake()->paragraph(),
+            'phone' => fake()->optional()->phoneNumber(),
+            'address' => fake()->optional()->streetAddress(),
+            'postal_code' => fake()->optional()->postcode(),
+            'city' => fake()->optional()->city(),
         ];
     }
 }
