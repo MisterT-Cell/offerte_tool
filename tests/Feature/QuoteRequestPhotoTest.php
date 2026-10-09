@@ -10,5 +10,5 @@ it('belongs to a quote request', function () {
         'quote_request_id' => $quoteRequest->id,
     ]);
 
-    excpect($photo->quoteRequest->id)->toBe($quoteRequest->id);
+    expect($photo->quoteRequest->id)->toBe($quoteRequest->id);
 });
