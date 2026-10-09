@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('quote_requests', function (Blueprint $table) {
             $table->id();
+            $table->string('status')->default('new')->index();
             $table->timestamps();
         });
     }
