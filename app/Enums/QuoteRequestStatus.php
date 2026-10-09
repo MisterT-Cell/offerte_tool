@@ -10,7 +10,6 @@ enum QuoteRequestStatus: string
     case Completed = 'completed';
     case Rejected = 'rejected';
 
-
     public function label(): string
     {
         return match ($this) {
