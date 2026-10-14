@@ -2,6 +2,7 @@
 
 use App\Enums\QuoteRequestStatus;
 use App\Models\QuoteRequest;
+use App\Models\QuoteRequestPhoto;
 
 it('gives a new quote request the status new', function () {
     $quoteRequest = QuoteRequest::factory()->create();
@@ -50,4 +51,12 @@ it('allows the optional details to be empty', function () {
         ->address->toBeNull()
         ->postal_code->toBeNull()
         ->city->toBeNull();
+});
+
+it('has many photos', function () {
+    $quoteRequest = QuoteRequest::factory()->create();
+
+    QuoteRequestPhoto::factory()->count(3)->for($quoteRequest)->create();
+
+    expect($quoteRequest->photos)->toHaveCount(3);
 });
