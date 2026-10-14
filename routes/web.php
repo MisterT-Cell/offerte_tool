@@ -1,8 +1,9 @@
 <?php
 
+use App\Livewire\CreateQuoteRequest;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome')->name('home');
+Route::livewire('/', CreateQuoteRequest::class)->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
